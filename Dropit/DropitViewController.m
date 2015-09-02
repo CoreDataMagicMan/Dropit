@@ -9,7 +9,7 @@
 #import "DropitViewController.h"
 #import "DynamicBehavior.h"
 #import "BezierPath.h"
-static const CGSize DROP_SIZE = {25,25};
+static const CGSize DROP_SIZE = {30, 30};
 @interface DropitViewController () <UIDynamicAnimatorDelegate>
 @property (weak, nonatomic) IBOutlet BezierPath *gameView;
 //声明一个动画者

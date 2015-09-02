@@ -17,9 +17,24 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSL-RP-usx" customClass="BezierPath">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="OYi-jw-Tvw"/>
+                                    <constraint firstAttribute="width" constant="300" id="v3q-qx-xA9"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OYi-jw-Tvw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="OYi-jw-Tvw"/>
+                                        <exclude reference="v3q-qx-xA9"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="lEn-PL-f4N" appends="YES" id="qqU-jz-dKr"/>
                                     <outletCollection property="gestureRecognizers" destination="nbY-pt-EcF" appends="YES" id="gEe-KF-KlT"/>
@@ -28,11 +43,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zSL-RP-usx" secondAttribute="bottom" id="5CT-To-dxx"/>
-                            <constraint firstItem="zSL-RP-usx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8xJ-sS-bFe"/>
-                            <constraint firstItem="zSL-RP-usx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="AIT-cR-mC7"/>
-                            <constraint firstAttribute="trailing" secondItem="zSL-RP-usx" secondAttribute="trailing" id="Sec-sT-INU"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zSL-RP-usx" secondAttribute="bottom" id="0jJ-Xd-rgc"/>
+                            <constraint firstItem="zSL-RP-usx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="BEz-Nv-3Ue"/>
+                            <constraint firstItem="zSL-RP-usx" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Xee-Gn-iWH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zSL-RP-usx" secondAttribute="bottom" id="bHC-Pz-21b"/>
+                            <constraint firstItem="zSL-RP-usx" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gA9-fu-SYC"/>
+                            <constraint firstAttribute="centerX" secondItem="zSL-RP-usx" secondAttribute="centerX" constant="150" id="ovL-o0-AO7">
+                                <variation key="widthClass=compact" constant="50"/>
+                            </constraint>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BEz-Nv-3Ue"/>
+                                <exclude reference="gA9-fu-SYC"/>
+                                <exclude reference="0jJ-Xd-rgc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="BEz-Nv-3Ue"/>
+                                <exclude reference="Xee-Gn-iWH"/>
+                                <include reference="gA9-fu-SYC"/>
+                                <exclude reference="ovL-o0-AO7"/>
+                                <include reference="0jJ-Xd-rgc"/>
+                                <exclude reference="bHC-Pz-21b"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="gameView" destination="zSL-RP-usx" id="l9U-i6-1kY"/>
